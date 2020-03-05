@@ -29,10 +29,10 @@ class Visit(models.Model):
     
 
     def get_duration(self):
-        exit_out =timezone.now() 
+        exit_time =timezone.now()
         if self.leaved_at:
-            exit_out = self.leaved_at
-        duration = exit_out - self.entered_at
+            exit_time = self.leaved_at
+        duration = exit_time - self.entered_at
 
         return duration
 
